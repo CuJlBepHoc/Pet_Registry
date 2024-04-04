@@ -1,0 +1,33 @@
+cujlbep@ubuntu:~$ history
+    4  cat > Pets.txt << EOF
+Dogs
+Cats
+Hamsters
+EOF
+
+    5  cat > Pack_Animals.txt << EOF
+Horses
+Camels
+Donkeys
+EOF
+
+    6  ls
+    7  cat Pets.txt Pack_Animals.txt > Human_Friends.txt
+    8  cat Human_Friends.txt
+    9  mkdir Animals
+   10  mv Human_Friends.txt Animals/
+   11  ls
+   12  cd Animals/
+   13  ls
+   14  cd..
+   15  cd ..
+   16  sudo add-apt-repository mysql-apt-config
+   17  wget https://dev.mysql.com/get/mysql-apt-config_0.8.29-1_all.deb
+   18  sudo dpkg -i mysql-apt-config_0.8.29-1_all.deb
+   19  sudo apt update
+   20  sudo apt install mysql-server
+   21  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+   22  sudo dpkg -i google-chrome-stable_current_amd64.deb
+   23  sudo apt-get install -f
+   24  dpkg -l | grep google-chrome
+   25  sudo dpkg -r google-chrome-stable
