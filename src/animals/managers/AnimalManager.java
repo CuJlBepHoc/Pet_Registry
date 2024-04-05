@@ -19,7 +19,7 @@ public class AnimalManager {
 
         this.animals = animals;
     }
-
+    // Метод для добавления нового животного в список
     public void addNewAnimal() {
         System.out.println("Выберите тип животного: ");
         System.out.println("1. Собака");
@@ -69,7 +69,7 @@ public class AnimalManager {
 
         FileHandler.saveDataToFile(this.animals);
     }
-
+    // Метод для просмотра команд животного
     public void viewAnimalCommands() {
         OutputHandler.displayAllAnimals(this.animals);
 
@@ -82,7 +82,7 @@ public class AnimalManager {
         Animal selectedAnimal = this.animals.get(animalNumber - 1);
         OutputHandler.displayAnimalCommands(selectedAnimal);
     }
-
+    // Метод для обучения животного новой команде
     public void trainAnimal() {
         OutputHandler.displayAllAnimals(this.animals);
 
@@ -98,7 +98,7 @@ public class AnimalManager {
 
         FileHandler.saveDataToFile(this.animals);
     }
-
+    // Метод для удаления животного из списка
     public  void removeAnimal() {
         OutputHandler.displayAllAnimals(this.animals);
 

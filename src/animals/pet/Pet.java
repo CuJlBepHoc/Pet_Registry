@@ -5,6 +5,7 @@ import java.time.Period;
 import animals.Animal;
 
 public class Pet extends Animal {
+    // Конструктор класса Pet
     public Pet(String name, LocalDate birthDate) {
         super(name, birthDate);
     }

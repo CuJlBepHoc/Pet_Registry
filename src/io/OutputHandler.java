@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import animals.Animal;
 
 public class OutputHandler {
+    // Метод для отображения главного меню программы
     public static void displayMenu() {
         System.out.println("\nГлавное меню:");
         System.out.println("1. Зарегистрировать новое животное");
@@ -15,6 +16,8 @@ public class OutputHandler {
         System.out.println("5. Удалить из реестра");
         System.out.println("0. Выйти из программы");
     }
+
+    // Метод для отображения списка команд для определенного животного
     public static void displayAnimalCommands(Animal animal) {
         if (animal.getCommands().isEmpty()) {
             System.out.println("Животное не знает команд.");
@@ -24,6 +27,7 @@ public class OutputHandler {
         }
     }
 
+    // Метод для отображения списка всех животных
     public static void displayAllAnimals(ArrayList<Animal> animals) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         int index = 1;

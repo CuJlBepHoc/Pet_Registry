@@ -15,27 +15,32 @@ public abstract class Animal {
     protected ArrayList<String> commands = new ArrayList<>();
     protected LocalDate birthDate;
 
+    // Конструктор класса Animal
     public Animal(String name, LocalDate birthDate) {
         this.name = name;
         this.birthDate = birthDate;
     }
-
+    // Метод для добавления команды животному
     public void addCommand(String command) {
         commands.add(command);
     }
 
+    // Метод для получения списка команд животного
     public ArrayList<String> getCommands() {
         return commands;
     }
 
+    // Метод для получения имени животного
     public String getName() {
         return name;
     }
 
+    // Метод для получения даты рождения животного
     public LocalDate getBirthDate() {
         return birthDate;
     }
 
+    // Метод для сериализации данных животного
     public String serialize() {
         StringBuilder sb = new StringBuilder();
         sb.append(getClass().getSimpleName()).append(";").append(name).append(";")
@@ -46,6 +51,7 @@ public abstract class Animal {
         return sb.toString();
     }
 
+    // Метод для десериализации данных животного
     public static Animal deserialize(String data) {
         String[] parts = data.split(";");
         if (parts.length < 3) {
@@ -89,5 +95,6 @@ public abstract class Animal {
         return animal;
     }
 
+    // Абстрактный метод для вычисления возраста животного
     public abstract int calculateAge();
 }
