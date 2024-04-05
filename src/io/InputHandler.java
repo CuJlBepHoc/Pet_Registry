@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class InputHandler {
     private static final Scanner scanner = new Scanner(System.in);
 
+    // Метод для получения целочисленного ввода от пользователя
     public static int getIntInput(String prompt) {
         System.out.print(prompt);
         while (!scanner.hasNextInt()) {
@@ -20,11 +21,13 @@ public class InputHandler {
         return input;
     }
 
+    // Метод для получения строкового ввода от пользователя
     public static String getStringInput(String prompt) {
         System.out.print(prompt);
         return scanner.nextLine();
     }
 
+    // Метод для получения даты от пользователя
     public static LocalDate getDateInput(String prompt) {
         LocalDate date = null;
         while (date == null) {
