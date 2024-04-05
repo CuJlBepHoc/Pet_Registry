@@ -1,4 +1,9 @@
 package animals.working;
 
-public class Donkey {
+import java.time.LocalDate;
+
+public class Donkey extends WorkingAnimal {
+    public Donkey(String name, LocalDate birthDate) {
+        super(name, birthDate);
+    }
 }
